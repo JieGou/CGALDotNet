@@ -103,6 +103,7 @@ namespace CGALDotNetTest.Geometry
         public void Transform()
         {
             var box = new Box2<EEK>(-1, 1);
+            //移动
             box.Translate(new Point2d(1, 1));
 
             Assert.AreEqual(new Point2d(0, 0), box.Min);

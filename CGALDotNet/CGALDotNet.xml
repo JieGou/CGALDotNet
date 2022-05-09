@@ -1254,6 +1254,40 @@
             Check if the object is still valid.
             </summary>
         </member>
+        <member name="P:CGALDotNet.Circular.Circle2d.Radius2">
+            <summary>
+            The squared radius.
+            </summary>
+        </member>
+        <member name="P:CGALDotNet.Circular.Circle2d.Diameter">
+            <summary>
+            The circles diameter.
+            </summary>
+        </member>
+        <member name="P:CGALDotNet.Circular.Circle2d.Area">
+            <summary>
+            The circles area.
+            </summary>
+        </member>
+        <member name="P:CGALDotNet.Circular.Circle2d.Circumference">
+            <summary>
+            The circles circumference.
+            </summary>
+        </member>
+        <member name="M:CGALDotNet.Circular.Circle2d.Contains(CGALDotNetGeometry.Numerics.Point2d)">
+            <summary>
+            Does the circle contain the point.
+            </summary>
+            <param name="p">The point</param>
+            <returns>true if circle contains point</returns>
+        </member>
+        <member name="M:CGALDotNet.Circular.Circle2d.Intersects(CGALDotNet.Circular.Circle2d)">
+            <summary>
+            Does this circle intersect with the other circle.
+            </summary>
+            <param name="circle">The other circle</param>
+            <returns>True if the circles intersect</returns>
+        </member>
         <member name="T:CGALDotNet.Collections.NativeList`1">
             <summary>
             

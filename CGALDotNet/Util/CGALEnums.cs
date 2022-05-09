@@ -76,32 +76,50 @@ namespace CGALDotNet
         }
     }
 
-    public enum ANGLE 
-    { 
-        OBTUSE = -1, 
-        RIGHT = 0, 
-        ACUTE = 1 
+    public enum ANGLE
+    {
+        OBTUSE = -1,
+        RIGHT = 0,
+        ACUTE = 1
     }
 
+    /// <summary>
+    /// 范围类型
+    /// </summary>
     public enum BOUNDED_SIDE
-    { 
-        ON_UNBOUNDED_SIDE = -1, 
-        ON_BOUNDARY = 0, 
+    {
+        /// <summary>
+        /// 外部
+        /// </summary>
+        ON_UNBOUNDED_SIDE = -1,
+
+        /// <summary>
+        /// 边界上
+        /// </summary>
+        ON_BOUNDARY = 0,
+
+        /// <summary>
+        /// 内部
+        /// </summary>
         ON_BOUNDED_SIDE = 1,
+
+        /// <summary>
+        /// 不确定
+        /// </summary>
         UNDETERMINED = 2
     }
 
-    public enum COMPARISON_RESULT 
-    { 
-        SMALLER = -1, 
-        EQUAL = 0, 
+    public enum COMPARISON_RESULT
+    {
+        SMALLER = -1,
+        EQUAL = 0,
         LARGER = 1
     }
 
-    public enum SIGN 
-    { 
-        NEGATIVE = -1, 
-        ZERO = 0, 
+    public enum SIGN
+    {
+        NEGATIVE = -1,
+        ZERO = 0,
         POSITIVE = 1
     }
 
@@ -120,8 +138,8 @@ namespace CGALDotNet
     }
 
     public enum ORIENTED_SIDE
-    { 
-        ON_NEGATIVE_SIDE = -1, 
+    {
+        ON_NEGATIVE_SIDE = -1,
         ON_BOUNDARY = 0,
         ON_POSITIVE_SIDE = 1,
         UNDETERMINED = 2
@@ -139,5 +157,4 @@ namespace CGALDotNet
         POLYHEDRON,
         SURFACE_MESH
     }
-
 }

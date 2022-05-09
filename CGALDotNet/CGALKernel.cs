@@ -16,7 +16,6 @@ namespace CGALDotNet
 {
     public abstract class CGALKernel
     {
-
         internal abstract GeometryKernel2 GeometryKernel2 { get; }
 
         internal abstract PolylineKernel2 PolylineKernel2 { get; }
@@ -67,7 +66,7 @@ namespace CGALDotNet
 
         internal abstract SurfaceMeshKernel3 SurfaceMeshKernel3 { get; }
 
-        internal abstract TetrahedralRemeshingKernel TetrahedralRemeshingKernel  { get; }
+        internal abstract TetrahedralRemeshingKernel TetrahedralRemeshingKernel { get; }
 
         internal abstract SurfaceSubdivisionKernel SurfaceSubdivisionKernel { get; }
 
@@ -92,6 +91,9 @@ namespace CGALDotNet
         internal abstract MeshProcessingLocateKernel MeshProcessingLocateKernel { get; }
     }
 
+    /// <summary>
+    /// EIK内核——This is the lowest level of precision offered and stands for exact predicates inexact construction kernel
+    /// </summary>
     public class EIK : CGALKernel
     {
         public static readonly EIK Instance = new EIK();
@@ -171,6 +173,9 @@ namespace CGALDotNet
         internal override MeshProcessingLocateKernel MeshProcessingLocateKernel => MeshProcessingLocateKernel_EIK.Instance;
     }
 
+    /// <summary>
+    /// EEK内核——This is generally the recommended kernel to use and offers variable precision through MP_Float
+    /// </summary>
     public class EEK : CGALKernel
     {
         public static readonly EEK Instance = new EEK();
@@ -249,5 +254,4 @@ namespace CGALDotNet
 
         internal override MeshProcessingLocateKernel MeshProcessingLocateKernel => MeshProcessingLocateKernel_EEK.Instance;
     }
-
 }
