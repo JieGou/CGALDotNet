@@ -89,6 +89,8 @@ namespace CGALDotNet
         internal abstract MeshProcessingFeaturesKernel MeshProcessingFeaturesKernel { get; }
 
         internal abstract MeshProcessingLocateKernel MeshProcessingLocateKernel { get; }
+
+        internal abstract HeatMethodKernel HeatMethodKernel { get; }
     }
 
     /// <summary>
@@ -171,6 +173,8 @@ namespace CGALDotNet
         internal override MeshProcessingFeaturesKernel MeshProcessingFeaturesKernel => MeshProcessingFeaturesKernel_EIK.Instance;
 
         internal override MeshProcessingLocateKernel MeshProcessingLocateKernel => MeshProcessingLocateKernel_EIK.Instance;
+
+        internal override HeatMethodKernel HeatMethodKernel => HeatMethodKernel_EIK.Instance;
     }
 
     /// <summary>
@@ -253,5 +257,7 @@ namespace CGALDotNet
         internal override MeshProcessingFeaturesKernel MeshProcessingFeaturesKernel => MeshProcessingFeaturesKernel_EEK.Instance;
 
         internal override MeshProcessingLocateKernel MeshProcessingLocateKernel => MeshProcessingLocateKernel_EEK.Instance;
+
+        internal override HeatMethodKernel HeatMethodKernel => HeatMethodKernel_EEK.Instance;
     }
 }
